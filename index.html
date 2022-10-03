@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+           <input type="text" placeholder="0" id="output-screen">
+           <button  Onclick="Clear()">Cl</button>
+           <button Onclick="del()">Del</button>
+           <button Onclick="display('%')">%</button>
+           <button Onclick="display('/')">/</button>
+           <button Onclick=" display('7')">7</button>
+           <button Onclick=" display('8')">8</button>
+           <button Onclick=" display('9')">9</button>
+           <button Onclick="display('*') ">*</button>
+           <button Onclick="display('4') ">4</button>
+           <button Onclick="display('5') ">5</button>
+           <button Onclick=" display('6')">6</button>
+           <button Onclick="display('-') ">-</button>
+           <button Onclick="display('1') ">1</button>
+           <button Onclick="display('2') ">2</button>
+           <button Onclick=" display('3')">3</button>
+           <button Onclick="display('+') ">+</button>
+           <button Onclick="display('.') ">.</button>
+           <button Onclick="display('0') ">0</button>
+           <button  class="mini"Onclick="Calculate()">=</button>
+ 
+        </div>
+    </div>
+    <script>
+      let output=document.getElementById("output-screen");
+      function display(num)
+      {
+        output.value+=num;
+      }
+      function Calculate()
+      {
+        try{
+            output.value=eval(output.value);
+        }
+        catch
+        {
+            alert("invalid operation");
+        }
+      }
+
+    </script>
+</body>
+</html>
